@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <title>Belly Button Biodiversity</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" align="center">
+            <h2>Belly Button Biodiversity</h2> 
+            <p>Use the interactive charts below to explore the dataset</p> 
+        </div>
+    </div>
+    <div class="container">
+        <div class ="row">
+            <div class=" col-md-2">
+                <div class ="panel panel-default">
+                        <div class="panel-body">
+                            <h3 class="col-sm-12">Select Sample ID</h3>
+                            <select class="col-sm-12" id="selDataset" onchange="optionChanged(this.value)">
+                                   
+                            </select>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary" >
+                        <div class="panel-heading" >
+                                <h3 class="panel-title">Sample Metadata</h3>
+                        </div>
+                        <div class="panel-body">
+                                
+                        </div>
+                    </div>
+            </div>
+            <div class="col-sm-5">
+                <h3 align="center">Pie Plot Will Go Here</h3>
+                <div id="pie_plot"></div>
+            </div>
+            <div class="col-sm-5">
+                <h3 align="center">Gauge Will Go Here</h3>
+                <div class="col-sm-11" id="gauge"></div>
+            </div>
+        </div>
+        <div class="row">
+            <h3 align="center">Bubble Plot Will Go Here</h3>
+            <div id="bubbleplot"></div>
+            <script src="{{ url_for('static', filename='js/app2.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+        </div>
+    </div>
+</body>
+</html>
